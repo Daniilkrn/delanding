@@ -167,6 +167,12 @@ gulp.task("default", function () {
         .pipe(gulp.dest("dist"));
 });
 
+gulp.task("default", function () {
+    gulp.src("js/main.js")
+        .pipe(gcmq())
+        .pipe(gulp.dest("dist"));
+});
+
 const build = gulp.series(clean, gulp.parallel(html,css,js,fonts,images));
 const watch = gulp.parallel(build, watchFiles, serve);
 
