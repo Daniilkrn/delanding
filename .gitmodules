@@ -1,0 +1,3 @@
+[submodule "delanding"]
+	path = delanding
+	url = https://github.com/Daniilkrn/delanding.git

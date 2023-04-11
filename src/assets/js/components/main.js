@@ -1,3 +1,4 @@
+
 //= components/form.js
 
 const modal = document.querySelector('.modal')
@@ -24,4 +25,3 @@ document.querySelector('.modal').addEventListener("click", (e)=>{
 const modalBox = document.querySelector('.modal_box').addEventListener('click', (e) => {
     e.stopPropagation()
 })
-
