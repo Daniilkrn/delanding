@@ -25,7 +25,6 @@ form.onsubmit = function (event) {
     if(!validateEmail(emailVal)) {
         email.classList.add("error");
     } else {
-        alert("w");
         email.classList.remove("error");
         document.querySelector(".modalConfirm").classList.add("open");
         setTimeout(() => {
@@ -35,6 +34,7 @@ form.onsubmit = function (event) {
             document.querySelector(".modal").classList.remove("open");
             document.body.classList.remove("openBody");
         }, 3001);
+        form.reset();
     }
 };
 
