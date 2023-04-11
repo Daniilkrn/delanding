@@ -1,0 +1,263 @@
+@media (max-width: 1390px) {
+    .main_desc .conent_maindesc__container {
+        flex-direction: column !important;
+    }
+
+    .main_desc .conent_maindesc__container .illustration {
+        left: 0;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .background_clients .background .talk__container {
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center;
+    }
+
+    .background_clients .background .talk__container .desc {
+        width: 100%;
+        text-align: center;
+    }
+
+    .background_clients .background .talk__container .btn_talk {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .background_clients {
+        width: 100%;
+    }
+
+    .background_clients .desc .our {
+        width: 100%;
+        text-align: center;
+    }
+
+    .background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+    }
+
+    .background .talk {
+        left: 0;
+    }
+
+    .footer__container {
+        left: 0 !important;
+    }
+}
+
+@media (max-width: 935px) {
+    .footer__container {
+        width: 100%;
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 935px) {
+    .clientHelp {
+        margin: 20px;
+    }
+
+    .clientHelp .left_sec .legend h1 {
+        font-size: 36px !important;
+    }
+
+    .clientHelp .left_sec .card {
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .clientHelp .right_sec {
+        margin-left: 0;
+    }
+
+    .background .talk__container {
+        width: 100%;
+    }
+
+    .background .talk {
+        flex-direction: column;
+    }
+
+    .background_clients {
+        width: 100%;
+    }
+
+    .logo_clients {
+        display: flex;
+        justify-content: center !important;
+    }
+
+    .logo_clients .desc {
+        width: 100%;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .logo_clients .desc .our {
+        margin-right: 0 !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+
+    .logo_clients .desc .second_desc {
+        width: 80%;
+        padding: 0px 20px;
+    }
+
+    .logo_clients .square_logo__container {
+        width: 70%;
+    }
+
+    .logo_clients .square_logo__container .sec2, .logo_clients .square_logo__container .sec6 {
+        border-right: none !important;
+        border-bottom: 1px solid #FFFFFF;
+    }
+
+    .logo_clients .square_logo__container .sec5 {
+        border-bottom: 1px solid #FFFFFF;
+    }
+}
+
+@media (max-width: 800px) {
+    .conent_maindesc__container .illustration {
+        display: flex;
+        justify-content: center;
+    }
+
+    .conent_maindesc__container .illustration img {
+        max-width: 80%;
+    }
+
+    .clientHelp {
+        margin-bottom: 100px;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .clientHelp .legend {
+        margin-bottom: 40px !important;
+    }
+
+    .clientHelp .card {
+        min-width: 330px;
+    }
+
+    .clientHelp .left_sec {
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .clientHelp .left_sec .card {
+        padding: 20px 50px;
+    }
+
+    .clientHelp .right_sec {
+        margin-top: 100px;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .footer__container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+    }
+
+    .footer__container .leftMain_block {
+        max-width: none !important;
+        width: 90% !important;
+        margin-right: 0 !important;
+        margin-bottom: 0px;
+        margin-right: 0;
+        padding-left: 0;
+    }
+
+    .footer__container .leftMain_block .img_container {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer__container .seconds_blocks {
+        width: 100% !important;
+        margin-right: 0 !important;
+        justify-content: space-around !important;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 630px) {
+    .conent_maindesc__container .desc {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .conent_maindesc__container .desc h1 {
+        font-size: calc(2vw + 4vh + 2vmin) !important;
+    }
+
+    .conent_maindesc__container .desc h4 {
+        padding: 0px 20px;
+        font-size: calc(1vw + 1vh + 1vmin) !important;
+    }
+
+    .conent_maindesc__container .desc .btn {
+        display: flex;
+        justify-content: center !important;
+    }
+
+    .square_logo__container {
+        width: 40% !important;
+    }
+
+    .square_logo__container .sec1, .square_logo__container .sec3, .square_logo__container .sec5, .square_logo__container .sec7 {
+        border-right: none !important;
+    }
+
+    .square_logo__container .sec7 {
+        border-bottom: 1px solid #FFFFFF;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo_clients .our {
+        font-size: 28px !important;
+        width: 40% !important;
+        padding: 0px 20px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 500px) {
+    .conent_maindesc__container .illustration {
+        width: 80% !important;
+    }
+
+    .header_container .img_container {
+        padding-left: 20px;
+    }
+
+    .clientHelp {
+        justify-content: center !important;
+    }
+
+    .clientHelp .card {
+        min-width: 240px;
+    }
+}

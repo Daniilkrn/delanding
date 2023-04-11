@@ -1,0 +1,401 @@
+@import url(//db.onlinewebfonts.com/c/d1243736bfe07b546f8f1e54e7804afb?family=Galien);
+
+body {
+    margin: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    height: 100%;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+[class*=__container] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 940px;
+}
+
+body.openBody {
+    overflow-y: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+header {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    min-height: auto;
+    border-bottom: none;
+    padding-bottom: 70px;
+}
+
+header .header_container {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .header_container .btn_span {
+    display: flex;
+    height: 2px;
+    justify-content: center;
+    left: -30px;
+    position: relative;
+    top: 20px;
+    width: 30px;
+    width: 24px;
+}
+
+header .header_container .btn_span span {
+    background: #356EAD;
+    bottom: 10px;
+    content: "";
+    height: 2px;
+    left: 0px;
+    width: 24px;
+}
+
+header .header_container .btn_span ::before {
+    background: #356EAD;
+    bottom: 10px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 24px;
+}
+
+header .header_container .btn_span ::after {
+    background: #356EAD;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 24px;
+}
+
+footer {
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+footer .hr_block {
+    position: relative;
+    left: -100px;
+    background-color: #FFFFFF;
+    display: flex;
+    width: 100%;
+    padding: 0;
+}
+
+footer .hr_block hr {
+    display: flex;
+    justify-content: flex-start;
+    width: 1500px;
+    padding: 0;
+    height: 0;
+    border: none;
+    border: 1px solid #333;
+}
+
+footer .footer__container {
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    left: 96px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+footer .footer__container .leftMain_block {
+    margin-right: 70px;
+    max-width: 330px;
+}
+
+footer .footer__container .leftMain_block ul {
+    padding-left: 0;
+}
+
+footer .footer__container .leftMain_block ul li {
+    font-family: "Gilroy";
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+footer .footer__container .leftMain_block ul li:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+footer .footer__container .leftMain_block .img_container {
+    display: flex;
+    align-items: center;
+}
+
+footer .footer__container .leftMain_block .img_container h1 {
+    font-family: "Gilroy";
+    font-size: 28px;
+    line-height: 46px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-left: 20px;
+}
+
+footer .footer__container .leftMain_block .copyright {
+    margin-top: 64px;
+}
+
+footer .footer__container .leftMain_block .copyright h4 {
+    font-family: "Gilroy";
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    opacity: 0.4;
+}
+
+footer .footer__container .seconds_blocks {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-right: 140px;
+    font-family: "Gilroy";
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+footer .footer__container .seconds_blocks ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+footer .footer__container .seconds_blocks ul a {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+footer .footer__container .seconds_blocks ul a:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+footer .footer__container .seconds_blocks ul a:first-child {
+    margin-top: 32px;
+}
+
+footer .footer__container .seconds_blocks .right_block {
+    margin-left: 50px;
+}
+
+footer .footer__container .seconds_blocks .right_block, footer .footer__container .left_block {
+    font-family: "Gilroy";
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.background {
+    margin-top: 120px;
+    position: relative;
+    right: 96px;
+    min-height: 900px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    background: #316099;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    border-radius: 0px 200px 0px 0px;
+}
+
+.background .talk {
+    position: relative;
+    left: 96px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 80px;
+}
+
+.background .talk .talk__container {
+    justify-content: space-between;
+}
+
+.background .talk .talk__container h1 {
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.background .talk .talk__container li {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+
+.background .talk .btn_talk {
+    margin-left: 180px;
+    margin-right: 80px;
+}
+
+.background .talk .btn_talk button {
+    background: #5A98D0;
+    border-radius: 10px;
+    padding: 15px 75px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+
+.background .talk .btn_talk .btn_talk_link:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.background_clients {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    border-radius: 200px 0px 0px 0px;
+    background: #5A98D0;
+    display: flex;
+    justify-content: center;
+    min-height: 1549px;
+}
+
+.background_clients .logo_clients {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background_clients .logo_clients .logo__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.background_clients .logo_clients .logo__container .desc {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 120px;
+}
+
+.background_clients .logo_clients .logo__container .desc .our {
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-right: 97px;
+}
+
+.background_clients .logo_clients .logo__container .desc .second_desc {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.background_clients .logo_clients .logo__container .square_logo__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.background_clients .logo_clients .logo__container .square_logo__container .logoSection {
+    min-width: 220px;
+    text-align: center;
+    padding: 40px 0px;
+}
+
+.background_clients .logo_clients .logo__container .square_logo__container .logoSection li {
+    font-size: 20px;
+    line-height: 46px;
+    letter-spacing: 0.02em;
+    color: #F2F2F2;
+}
+
+.background_clients .logo_clients .logo__container .square_logo__container .sec8 {
+    background: #1F3F68;
+    opacity: 0.2;
+}
+
+.background_clients .logo_clients .logo__container .square_logo__container .sec8 li {
+    font-size: 20px;
+    line-height: 46px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.background_clients .logo_clients .logo__container .square_logo__container .sec1, .background_clients .logo_clients .logo__container .square_logo__container .sec2, .background_clients .logo_clients .logo__container .square_logo__container .sec3, .background_clients .logo_clients .logo__container .square_logo__container .sec4 {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.background_clients .logo_clients .logo__container .square_logo__container .sec1, .background_clients .logo_clients .logo__container .square_logo__container .sec2, .background_clients .logo_clients .logo__container .square_logo__container .sec3 {
+    border-right: 1px solid #FFFFFF;
+}
+
+.background_clients .logo_clients .logo__container .square_logo__container .sec5, .background_clients .logo_clients .logo__container .square_logo__container .sec6, .background_clients .logo_clients .logo__container .square_logo__container .sec7 {
+    border-right: 1px solid #FFFFFF;
+}
