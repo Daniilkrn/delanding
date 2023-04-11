@@ -1,27 +1,33 @@
-"use strict"
+/* eslint-disable no-undef */
+"use strict";
 
-const {src,dest} = require("gulp")
-const  gulp = require("gulp")
+const {src,dest} = require("gulp");
+const  gulp = require("gulp");
+// eslint-disable-next-line no-undef
+const autoprefixer = require("gulp-autoprefixer");
+const cssbeautify = require("gulp-cssbeautify");
+const removeComments = require("gulp-strip-css-comments");
+const rename = require("gulp-rename");
+// eslint-disable-next-line no-undef
+const sass = require("gulp-sass")(require("sass"));
+const cssnano = require("gulp-cssnano");
+// eslint-disable-next-line no-undef
+const uglify = require("gulp-uglify");
+// eslint-disable-next-line no-undef
+const rigger = require("gulp-rigger");
+const plumber = require("gulp-plumber");
+const panini = require("panini");
+const imagemin = require("gulp-imagemin");
+const del = require("del");
+const notify = require("gulp-notify");
+// eslint-disable-next-line no-unused-vars
+const media = require("gulp-group-css-media-queries");
+// eslint-disable-next-line no-unused-vars
+const ghPages = require("gulp-gh-pages");
+const browserSync = require("browser-sync").create();
 
-const autoprefixer = require("gulp-autoprefixer")
-const cssbeautify = require("gulp-cssbeautify")
-const removeComments = require("gulp-strip-css-comments")
-const rename = require("gulp-rename")
-const sass = require("gulp-sass")(require("sass"))
-const cssnano = require("gulp-cssnano")
-const uglify = require("gulp-uglify")
-const rigger = require("gulp-rigger")
-const plumber = require("gulp-plumber")
-const panini = require("panini")
-const imagemin = require("gulp-imagemin")
-const del = require("del")
-const notify = require("gulp-notify")
-const media = require("gulp-group-css-media-queries")
-const ghPages = require("gulp-gh-pages")
-const browserSync = require("browser-sync").create()
-
-const srcPath = "src/"
-const distPath = "dist/"
+const srcPath = "src/";
+const distPath = "dist/";
 
 const path = {
     build: {
@@ -46,7 +52,7 @@ const path = {
         fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     clean: "./" + distPath
-}
+};
 
 function serve() {
     browserSync.init({
@@ -57,16 +63,16 @@ function serve() {
 }
 
 function html() {
-    panini.refresh()
+    panini.refresh();
     return src(path.src.html, {base: srcPath})
         .pipe(plumber())
         .pipe(panini({
             root: srcPath,
-            layouts: srcPath + 'tpl/layouts/',
-            partials: srcPath + 'tpl/partials/',
+            layouts: srcPath + "tpl/layouts/",
+            partials: srcPath + "tpl/partials/",
         }))
         .pipe(dest(path.build.html))
-        .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.reload({stream: true}));
 }
 
 function css() {
@@ -76,8 +82,8 @@ function css() {
                 notify.onError({
                     title: "SCSS error",
                     message: "Error: <message error>"
-                })(err)
-                this.emit('end')
+                })(err);
+                this.emit("end");
             }
         }))
         .pipe(sass())
@@ -96,7 +102,7 @@ function css() {
             extname: ".css"
         }))
         .pipe(dest(path.build.css))
-        .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.reload({stream: true}));
 }
 
 function js() {
@@ -106,8 +112,8 @@ function js() {
                 notify.onError({
                     title: "SCSS error",
                     message: "Error: <message error>"
-                })(err)
-                this.emit('end')
+                })(err);
+                this.emit("end");
             }
         }))
         .pipe(rigger())
@@ -118,7 +124,7 @@ function js() {
             extname: ".js"
         }))
         .pipe(dest(path.build.js))
-        .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.reload({stream: true}));
 }
 
 function images() {
@@ -135,48 +141,48 @@ function images() {
             })
         ]))
         .pipe(dest(path.build.images))
-        .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.reload({stream: true}));
 }
 
 function fonts() {
     return src(path.src.fonts, {base: srcPath + "assets/fonts/"})
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({stream: true}));
 }
 
 function clean() {
-    return del(path.clean)
+    return del(path.clean);
 }
 
 function watchFiles() {
-    gulp.watch([path.watch.html], html)
-    gulp.watch([path.watch.js], js)
-    gulp.watch([path.watch.css], css)
-    gulp.watch([path.watch.fonts], fonts)
-    gulp.watch([path.watch.images], images)
+    gulp.watch([path.watch.html], html);
+    gulp.watch([path.watch.js], js);
+    gulp.watch([path.watch.css], css);
+    gulp.watch([path.watch.fonts], fonts);
+    gulp.watch([path.watch.images], images);
 }
 
-gulp.task('default', function () {
-    gulp.src('src/style.css')
+gulp.task("default", function () {
+    gulp.src("src/style.css")
         .pipe(gcmq())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest("dist"));
 });
 
-const build = gulp.series(clean, gulp.parallel(html,css,js,fonts,images))
-const watch = gulp.parallel(build, watchFiles, serve)
+const build = gulp.series(clean, gulp.parallel(html,css,js,fonts,images));
+const watch = gulp.parallel(build, watchFiles, serve);
 
-exports.html = html
-exports.css = css
-exports.js = js
-exports.images = images
-exports.clean = clean
-exports.fonts = fonts
-exports.build = build
-exports.watch = watch
-exports.default = watch
+exports.html = html;
+exports.css = css;
+exports.js = js;
+exports.images = images;
+exports.clean = clean;
+exports.fonts = fonts;
+exports.build = build;
+exports.watch = watch;
+exports.default = watch;
 
-const deploy = require('gulp-gh-pages'); 
+const deploy = require("gulp-gh-pages"); 
 
-gulp.task('deploy', function () { 
+gulp.task("deploy", function () { 
     return gulp.src("./dist/**/*") 
-      .pipe(deploy()) 
+      .pipe(deploy());
 });
