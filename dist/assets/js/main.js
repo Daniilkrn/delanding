@@ -16,18 +16,16 @@ form.onsubmit = function (event) {
         area.classList.add("error");
     } else {
         area.classList.remove("error");
-        return false; 
     }
     if(nickForm.value === "" || nickForm.value.length > 30){
         nickForm.classList.add("error");
     } else {
         nickForm.classList.remove("error");
-        return false; 
     }
     if(!validateEmail(emailVal)) {
         email.classList.add("error");
-        return false;
     } else {
+        alert("w");
         email.classList.remove("error");
         document.querySelector(".modalConfirm").classList.add("open");
         setTimeout(() => {

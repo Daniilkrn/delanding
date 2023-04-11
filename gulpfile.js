@@ -35,7 +35,7 @@ const path = {
         css: distPath + "assets/css/",
         js: distPath + "assets/js/",
         images: distPath + "assets/images/",
-        fonts: distPath + "assets/fonts/",
+        fonts: distPath + "assets/fonts/"
     },
     src: {
         html: srcPath + "*.html",
