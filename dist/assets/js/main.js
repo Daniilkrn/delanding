@@ -1,13 +1,14 @@
+/* eslint-disable no-undef */
 
 let form = document.querySelector(".form");
 let email = document.querySelector(".email");
 let area = document.querySelector(".area");
 let nickForm = document.querySelector(".nick");
 
-function validateEmail(email) {
-    let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
+// function validateEmail(email) {
+//     let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//     return re.test(String(email).toLowerCase());
+// }
 
 form.onsubmit = function (event) {
     event.preventDefault();
@@ -22,6 +23,7 @@ form.onsubmit = function (event) {
     } else {
         nickForm.classList.remove("error");
     }
+    // eslint-disable-next-line no-undef
     if(!validateEmail(emailVal)) {
         email.classList.add("error");
     } else {
@@ -43,27 +45,26 @@ document.querySelector(".close2").addEventListener("click",()=>{
     document.querySelector(".modalConfirm").classList.remove("open");
     document.querySelector(".modal").classList.remove("open");
     document.body.classList.remove("openBody");
-});
-
-document.querySelector(".modal");
-const talkBtn = document.querySelector(".btn_talk_link");
-talkBtn.addEventListener("click",()=>{
-    let email = document.querySelector(".email");
-    email.value = "";
-    document.querySelector(".modal").classList.add("open");
-    document.body.classList.add("openBody");
-    document.body.scrollTo(120,0);
+    form.reset();
 });
 
 document.querySelector(".close").addEventListener("click",()=>{
     document.querySelector(".modal").classList.remove("open");
     document.body.classList.remove("openBody");
-    
+    form.reset();
+});
+document.querySelector(".modal");
+const talkBtn = document.querySelector(".btn_talk_link");
+talkBtn.addEventListener("click",()=>{
+    document.querySelector(".modal").classList.add("open");
+    document.body.classList.add("openBody");
+    document.body.scrollTo(120,0);
 });
 
 document.querySelector(".modal").addEventListener("click", ()=>{
     document.querySelector(".modal").classList.remove("open");
     document.body.classList.remove("openBody");
+    form.reset();
 });
 
 document.querySelector(".modal_box").addEventListener("click", (e) => {

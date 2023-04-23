@@ -42,4 +42,11 @@ document.querySelector(".close2").addEventListener("click",()=>{
     document.querySelector(".modalConfirm").classList.remove("open");
     document.querySelector(".modal").classList.remove("open");
     document.body.classList.remove("openBody");
+    form.reset();
+});
+
+document.querySelector(".close").addEventListener("click",()=>{
+    document.querySelector(".modal").classList.remove("open");
+    document.body.classList.remove("openBody");
+    form.reset();
 });
