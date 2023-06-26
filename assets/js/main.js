@@ -62,20 +62,20 @@ document.querySelectorAll(".input").forEach((el, _idx) => el.addEventListener("i
     // }
 }));
 
-function validation (form) {
+function validation(form) {
 
 
-    function removeError (input) {
+    function removeError(input) {
         const parent = input.closest("label");
         const child = parent.querySelector(".errorText");
         console.log(input.classList);
-        if(input.classList.contains("error")){
+        if (input.classList.contains("error")) {
             child.remove();
             child.classList.remove(".errorText");
         }
     }
 
-    function createError (input,text) {
+    function createError(input, text) {
         const parent = input.parentNode;
         const p = document.createElement("p");
         p.classList.add("errorText");
@@ -90,10 +90,10 @@ function validation (form) {
 
         removeError(input);
 
-        if(input.value == ""){
+        if (input.value == "") {
             result = false;
-            createError(input,"обязательное поле!");
-        } 
+            createError(input, "обязательное поле!");
+        }
     });
 
     return result;
@@ -103,7 +103,7 @@ function validation (form) {
 form.onsubmit = function submitForm(event) {
     event.preventDefault();
 
-    if(validation(this) == true){
+    if (validation(this) == true) {
         scrollController.setMessageModal();
     }
     // let check = inputs.filter(input => input.validate === true);
@@ -175,11 +175,11 @@ modalSent.addEventListener("click", () => {
 
 
 function confirmPos(pos, flag) {
-    // let documentEl = {};
-    // flag ? documentEl = window : documentEl = body;
-    window.scrollTo({
+    let documentEl = {};
+    flag ? documentEl = window : documentEl = body;
+
+    setTimeout(window.scrollTo({
         top: pos,
         left: 0,
-    });
-
+    }));
 }
