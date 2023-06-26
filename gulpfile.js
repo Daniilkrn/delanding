@@ -48,11 +48,16 @@ const path = {
         html: srcPath + "**/*.html",
         css: srcPath + "assets/scss/**/*.scss",
         js: srcPath + "assets/js/**/*.js",
-        images: srcPath + "assets/images/**/*.{svg}",
+        images: srcPath + "assets/images/**/*.{png,svg,jpg,jpeg}",
         fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     clean: "./" + distPath
 };
+
+// async function buildHtml() {
+//     gulp.src(["*.html"])
+//         .pipe(gulp.dest(path.scripts.dest));
+// }
 
 function serve() {
     browserSync.init({
@@ -146,6 +151,7 @@ function images() {
 
 function fonts() {
     return src(path.src.fonts, {base: srcPath + "assets/fonts/"})
+    .pipe(dest(path.build.fonts))
     .pipe(browserSync.reload({stream: true}));
 }
 
@@ -174,9 +180,8 @@ exports.build = build;
 exports.watch = watch;
 exports.default = watch;
 
-const deploy = require("gulp-gh-pages"); 
 
-gulp.task("deploy", function () { 
-    return gulp.src("./dist/**/*") 
-      .pipe(deploy());
+gulp.task("deploy", function() {
+    return gulp.src("./dist/**/*");
+        // .pipe(ghPages());
 });
