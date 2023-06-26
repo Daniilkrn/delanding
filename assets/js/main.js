@@ -130,7 +130,7 @@ const scrollController = {
     enabled() {
         modal.classList.remove("open");
         body.classList.remove("openBody");
-        confirmPos(this.position, this.flag);
+        return confirmPos(this.position, this.flag);
     },
 
     setMessageModal() {
@@ -140,7 +140,6 @@ const scrollController = {
 
     disableMessageModal() {
         modalSent.classList.remove("open");
-        document.body.classList.remove("openBody");
         form.reset();
         confirmPos(this.position, this.flag);
     }
@@ -174,12 +173,27 @@ modalSent.addEventListener("click", () => {
     scrollController.disableMessageModal();
 });
 
-function confirmPos(pos, flag) {
-    let documentEl = {};
-
-    flag ? documentEl = window : documentEl = body;
-    documentEl.scrollTo({
+function fn (pos) {
+    alert(pos);
+    // document.body.classList.remove("openBody");
+    body.scrollTo({
         top: pos,
         left: 0,
     });
+}
+
+function confirmPos(pos, flag) {
+    let documentEl = {};
+    flag ? documentEl = window : documentEl = body;
+
+    if(!flag){
+        body.scrollTo({
+            top: pos,
+            left: 0,
+        });
+        talkBtn.scrollIntoView({block: "center", inline: "center"});
+    } else {
+        talkBtn.scrollIntoView({block: "center", inline: "center", behavior: "smooth"});
+    }
+    // return body.classList.remove("openBody");
 }
