@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 "use strict";
 
-const { src, dest } = require("gulp");
+const {src,dest} = require("gulp");
 const gulp = require("gulp");
 // eslint-disable-next-line no-undef
 const autoprefixer = require("gulp-autoprefixer");
@@ -54,6 +54,10 @@ const path = {
     clean: "./" + distPath
 };
 
+async function buildHtml() {
+    gulp.src(["*.html"])
+        .pipe(gulp.dest(path.scripts.dest));
+}
 
 function serve() {
     browserSync.init({
@@ -65,7 +69,7 @@ function serve() {
 
 function html() {
     panini.refresh();
-    return src(path.src.html, { base: srcPath })
+    return src(path.src.html, {base: srcPath})
         .pipe(plumber())
         .pipe(panini({
             root: srcPath,
@@ -73,13 +77,13 @@ function html() {
             partials: srcPath + "tpl/partials/",
         }))
         .pipe(dest(path.build.html))
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(browserSync.reload({stream: true}));
 }
 
 function css() {
-    return src(path.src.css, { base: srcPath + "assets/scss/" })
+    return src(path.src.css, {base: srcPath + "assets/scss/"})
         .pipe(plumber({
-            errorHandler: function (err) {
+            errorHandler: function(err) {
                 notify.onError({
                     title: "SCSS error",
                     message: "Error: <message error>"
@@ -103,13 +107,13 @@ function css() {
             extname: ".css"
         }))
         .pipe(dest(path.build.css))
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(browserSync.reload({stream: true}));
 }
 
 function js() {
-    return src(path.src.js, { base: srcPath + "assets/js/" })
+    return src(path.src.js, {base: srcPath + "assets/js/"})
         .pipe(plumber({
-            errorHandler: function (err) {
+            errorHandler: function(err) {
                 notify.onError({
                     title: "SCSS error",
                     message: "Error: <message error>"
@@ -125,30 +129,30 @@ function js() {
             extname: ".js"
         }))
         .pipe(dest(path.build.js))
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(browserSync.reload({stream: true}));
 }
 
 function images() {
-    return src(path.src.images, { base: srcPath + "assets/images/" })
+    return src(path.src.images, {base: srcPath + "assets/images/"})
         .pipe(imagemin([
-            imagemin.gifsicle({ interlaced: true }),
-            imagemin.mozjpeg({ quality: 80, progressive: true }),
-            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.mozjpeg({quality: 80, progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
             imagemin.svgo({
                 plugins: [
-                    { removeViewBox: true },
-                    { cleanupIDs: false }
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
                 ]
             })
         ]))
         .pipe(dest(path.build.images))
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(browserSync.reload({stream: true}));
 }
 
 function fonts() {
-    return src(path.src.fonts, { base: srcPath + "assets/fonts/" })
-        .pipe(dest(path.build.fonts))
-        .pipe(browserSync.reload({ stream: true }));
+    return src(path.src.fonts, {base: srcPath + "assets/fonts/"})
+    .pipe(dest(path.build.fonts))
+    .pipe(browserSync.reload({stream: true}));
 }
 
 function clean() {
@@ -163,7 +167,7 @@ function watchFiles() {
     gulp.watch([path.watch.images], images);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, fonts, images));
+const build = gulp.series(clean, gulp.parallel(html,css,js,fonts,images));
 const watch = gulp.parallel(build, watchFiles, serve);
 
 exports.html = html;
@@ -175,9 +179,11 @@ exports.fonts = fonts;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
+exports.default = async function () {
+    buildHtml();
+};
 
-
-gulp.task("deploy", function () {
+gulp.task("deploy", function() {
     return gulp.src("./dist/**/*")
         .pipe(ghPages());
 });

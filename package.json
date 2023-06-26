@@ -1,8 +1,12 @@
 {
   "name": "delanding",
+  "homepage": "https://daniilkrn.github.io/delanding/",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "deploy": "gulp build && gh-pages -d build"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
