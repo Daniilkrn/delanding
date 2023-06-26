@@ -129,7 +129,7 @@ const scrollController = {
 
     enabled() {
         modal.classList.remove("open");
-        body.classList.remove("openBody");
+        // body.classList.remove("openBody");
         return confirmPos(this.position, this.flag);
     },
 
@@ -185,15 +185,9 @@ function fn (pos) {
 function confirmPos(pos, flag) {
     let documentEl = {};
     flag ? documentEl = window : documentEl = body;
-
-    if(!flag){
-        body.scrollTo({
-            top: pos,
-            left: 0,
-        });
-        talkBtn.scrollIntoView({block: "center", inline: "center"});
-    } else {
-        talkBtn.scrollIntoView({block: "center", inline: "center", behavior: "smooth"});
-    }
+    window.scrollTo({
+        top: pos,
+        left: 0,
+    });
     // return body.classList.remove("openBody");
 }
