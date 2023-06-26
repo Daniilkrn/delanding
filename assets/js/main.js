@@ -129,7 +129,7 @@ const scrollController = {
 
     enabled() {
         modal.classList.remove("open");
-        document.querySelector("body").classList.remove("openBody");
+        body.classList.remove("openBody");
         confirmPos(this.position, this.flag);
     },
 
