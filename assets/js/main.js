@@ -129,7 +129,7 @@ const scrollController = {
 
     enabled() {
         modal.classList.remove("open");
-        // body.classList.remove("openBody");
+        body.classList.remove("openBody");
         return confirmPos(this.position, this.flag);
     },
 
@@ -173,21 +173,13 @@ modalSent.addEventListener("click", () => {
     scrollController.disableMessageModal();
 });
 
-function fn (pos) {
-    alert(pos);
-    // document.body.classList.remove("openBody");
-    body.scrollTo({
-        top: pos,
-        left: 0,
-    });
-}
 
 function confirmPos(pos, flag) {
-    let documentEl = {};
-    flag ? documentEl = window : documentEl = body;
+    // let documentEl = {};
+    // flag ? documentEl = window : documentEl = body;
     window.scrollTo({
         top: pos,
         left: 0,
     });
-    // return body.classList.remove("openBody");
+
 }
