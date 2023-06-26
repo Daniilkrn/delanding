@@ -54,10 +54,6 @@ const path = {
     clean: "./" + distPath
 };
 
-// async function buildHtml() {
-//     gulp.src(["*.html"])
-//         .pipe(gulp.dest(path.scripts.dest));
-// }
 
 function serve() {
     browserSync.init({
