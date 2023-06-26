@@ -216,7 +216,7 @@
         padding: 0px 20px;
         .desc {
             max-width: 40% !important;
-            min-width: 100%  !important;
+            min-width: 80%  !important;
             white-space: normal !important;
 
             h1 {
@@ -260,19 +260,34 @@
             margin-right: 0 !important;
         }
     }
-
-    .modal_box {
-        margin: 20px;
-        background-color: red !important;
-        .form{
-            input {
-                max-width: 400px !important;
-                min-width: 200px !important;
+    .modal{
+        .modal_box {
+            padding: 24px !important;
+            overflow: auto;
+            margin: 20px 0px !important;
+            padding: 0 !important;
+            max-width: 80%;
+            .form{
+                padding: 50px;
+                overflow: auto;
+                input {
+                    max-width: 400px !important;
+                    min-width: 200px !important;
+                }
+            }
+            .closeSpanDiv{
+                position: fixed !important;
+               
             }
         }
     }
 }
 
+@media screen and (max-width: 450px) {
+    .modal_box {
+        max-width: 90% !important;
+    }
+}
 
 @media (max-width: 1240px) {
     .background_clients {
@@ -631,6 +646,19 @@
                 max-height: none !important;
              
                 width: 80% !important;
+            }
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    .modal{
+        .modal_box {
+            overflow: auto !important;
+            padding: 40px !important;
+            margin: 20px !important;
+            .form{
+                overflow: auto;
             }
         }
     }

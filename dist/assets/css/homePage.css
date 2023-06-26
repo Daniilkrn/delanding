@@ -1,0 +1,589 @@
+@font-face {
+    font-family: "Gilroy-Regular";
+    src: url(../../assets/fonts/Gilroy-Regular.woff);
+}
+
+@font-face {
+    font-family: "Gilroy-Bold";
+  src: url(../../assets/fonts/Gilroy-Bold.woff);
+}
+
+@font-face {
+    font-family: "Galien";
+  src: url("//db.onlinewebfonts.com/t/d1243736bfe07b546f8f1e54e7804afb.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Gilroy-SemiBold";
+  src: url(../fonts/Gilroy-Semibold.woff) format("woff");
+}
+
+section {
+    background: linear-gradient(0deg, rgb(234, 243, 250) 8.84%, rgba(152, 195, 232, 0) 31.12%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.main_desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 110px 320px 190px 320px;
+    max-width: 1366px;
+    background: url(../../assets/images/illustration.png) no-repeat;
+    background-position-x: 760px;
+    background-position-y: 20px;
+}
+
+.main_desc .conent_maindesc__container__content {
+    z-index: 110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main_desc .conent_maindesc__container__content .desc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 550px;
+}
+
+.main_desc .conent_maindesc__container__content .desc h1 {
+    font-family: "Galien";
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 74px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #1F3F68;
+    margin-bottom: 60px;
+    white-space: nowrap;
+}
+
+.main_desc .conent_maindesc__container__content .desc h4 {
+    margin: 0;
+    padding: 0;
+    font-family: "Gilroy-Regular";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    opacity: 0.6;
+}
+
+.main_desc .conent_maindesc__container__content .desc .btn {
+    width: 100%;
+    margin-top: 74px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main_desc .conent_maindesc__container__content .desc .btn a {
+    font-family: "Gilroy-Regular";
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    border-radius: 10px;
+    background: #5A98D0;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    padding: 15px 48px;
+}
+
+.main_desc .conent_maindesc__container__content .illustration {
+    z-index: 90px;
+    position: relative;
+    right: 110px;
+    top: 10px;
+}
+
+.header_container {
+    width: 100%;
+}
+
+.header_container .img_container {
+    display: flex;
+    justify-content: center;
+}
+
+.clientHelp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.clientHelp .clientHelp__container__content {
+    margin-top: 180px;
+    margin-bottom: 212px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.clientHelp .left_sec {
+    height: 100%;
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.clientHelp .left_sec .legend {
+    margin-bottom: 158px;
+}
+
+.clientHelp .left_sec .legend h1 {
+    margin: 0;
+    padding: 0;
+    font-family: "Gilroy-SemiBold";
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    color: #316099;
+}
+
+.clientHelp .left_sec .card {
+    margin-left: 80px;
+}
+
+.clientHelp .left_sec .card .avatar {
+    padding-top: 48px;
+    position: relative;
+    left: -20px;
+}
+
+.clientHelp .card {
+    min-width: 380px;
+    min-height: 525px;
+    max-height: 525px;
+    background: #FFFFFF;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+}
+
+.clientHelp .card .avatar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 56px;
+}
+
+.clientHelp .card .desc1 {
+    padding: 0px 48px;
+    font-family: "Gilroy-SemiBold";
+    color: var(--blue-01, #1F3F68);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.clientHelp .card .desc1 p {
+    margin: 0;
+}
+
+.clientHelp .card .desc2 {
+    padding: 0px 48px;
+    font-family: "Gilroy-Regular";
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    opacity: 0.6;
+    margin-bottom: 32px;
+    margin-top: 16px;
+}
+
+.clientHelp .card .learn_more {
+    font-family: "Gilroy-SemiBold";
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #5A98D0;
+    display: flex;
+    align-items: center;
+    padding: 0px 48px;
+    margin-bottom: 48px;
+}
+
+.clientHelp .card .learn_more .svgArrow {
+    padding-left: 28px;
+}
+
+.clientHelp .right_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.clientHelp .right_sec .card1 {
+    margin-bottom: 100px;
+}
+
+.clientHelp .right_sec .card1 .avatar {
+    position: relative;
+    bottom: 22px;
+    margin-bottom: 32px;
+}
+
+.clientHelp .right_sec .card2 .avatar {
+    margin-top: 48px;
+}
+
+.modal {
+    overflow: initial;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 998;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s, visibility 0.4s;
+}
+
+.modal .modal_box {
+    padding: 56px;
+    transform: scale(0.4);
+    background-color: red;
+    max-width: 500px;
+    z-index: 1;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform 0.8s;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal form h1 {
+    color: var(--blue-01, #1F3F68);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0.8px;
+    text-align: left;
+    margin-bottom: 48px;
+    font-family: "Gilroy-SemiBold";
+}
+
+.modal form legend {
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+}
+
+.modal form label {
+    margin-bottom: 32px;
+    font-family: "Gilroy-Regular";
+    font-size: 16px;
+    color: var(--blue-01, #1F3F68);
+    line-height: 30px;
+    letter-spacing: 0.64px;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal form label p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.modal form label p.errorText {
+    color: red;
+}
+
+.modal form label h5 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+}
+
+.modal form label .area.error,
+.modal form label .nick.error,
+.modal form label .email.error {
+    border: 2px solid red;
+}
+
+.modal form label .email::-moz-placeholder {
+    color: #ccc;
+}
+
+.modal form label .email::placeholder {
+    color: #ccc;
+}
+
+.modal form label input {
+    padding: 20px 40px;
+    opacity: 0.4;
+    border: 2px solid #356EAD;
+    border-radius: 10px;
+    min-width: 400px;
+    margin-bottom: 10px;
+    margin-top: 8px;
+}
+
+.modal form label .area {
+    padding-bottom: 100px;
+}
+
+.modal form label input[placeholder] {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.2;
+}
+
+.modal form .btn_form {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.modal form .btn_form button {
+    font-family: "Gilroy-SemiBold";
+    width: 100%;
+    padding: 23px 20px;
+    background: #5A98D0;
+    box-shadow: 5px 20px 50px 0px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.64px;
+    color: #FFFFFF;
+}
+
+.modal.open .modal_box {
+    transform: scale(1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    padding: 56px;
+}
+
+.modal.open .modal_box form h1 {
+    color: var(--blue-01, #1F3F68);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0.8px;
+    text-align: left;
+    margin-bottom: 48px;
+    font-family: "Gilroy-SemiBold";
+}
+
+.modal.open .modal_box form label {
+    margin-bottom: 32px;
+    font-family: "Gilroy-Regular";
+    font-size: 16px;
+    color: var(--blue-01, #1F3F68);
+    line-height: 30px;
+    letter-spacing: 0.64px;
+}
+
+.modal.open .modal_box form label input {
+    margin-top: 8px;
+}
+
+.modal.open .modal_box form p {
+    color: rgb(234, 81, 81);
+}
+
+.modal.open .modal_box form .btn_form {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.modal.open .modal_box form .btn_form button {
+    font-family: "Gilroy-SemiBold";
+    width: 100%;
+    padding: 23px 20px;
+    background: #5A98D0;
+    box-shadow: 5px 20px 50px 0px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.64px;
+    color: #FFFFFF;
+}
+
+.modal.open {
+    width: 100%;
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    overflow: initial;
+}
+
+.modalConfirm {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 998;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s, visibility 0.4s;
+}
+
+.modalConfirm .modalConfrim_box {
+    margin: 30px 15px;
+    max-width: 400px;
+    padding: 45px;
+    z-index: 1;
+    background-color: white;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform 0.8s ease-in-out;
+}
+
+.modalConfirm .modalConfrim_box .message {
+    font-family: "Gilroy-Regular";
+    font-size: 34px;
+    line-height: 74px;
+    letter-spacing: 0.04em;
+    color: #111418;
+}
+
+.modalConfirm.open .modalConfrim_box {
+    transform: scale(1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalConfirm.open .modalConfrim_box .message {
+    font-family: "Gilroy-Regular";
+    font-size: 26px;
+}
+
+.modalConfirm.open {
+    width: 100%;
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+}
+
+.closeSpanDiv {
+    position: absolute;
+    right: 20px;
+    top: 6px;
+    z-index: 110;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.closeSpanDiv .spanClose:after {
+    content: "";
+    transform: rotate(0deg);
+    transition: 0.4s;
+}
+
+.closeSpanDiv .spanClose::before {
+    content: "";
+    transform: rotate(0deg);
+    transition: 0.4s;
+}
+
+.closeSpanDiv span {
+    content: "";
+    width: 54px;
+    cursor: pointer;
+    height: 54px;
+    display: flex;
+    border-radius: 2em;
+    margin-top: 10px;
+    background-color: #a7a1a1;
+    opacity: 0.4;
+}
+
+.closeSpanDiv span:hover {
+    opacity: 0.7;
+}
+
+.closeSpanDiv span::after {
+    content: "";
+    position: relative;
+    display: block;
+    left: 21px;
+    top: 14px;
+    content: " ";
+    height: 30px;
+    width: 2px;
+    background-color: rgb(0, 0, 0);
+}
+
+.closeSpanDiv span::before {
+    content: "";
+    position: relative;
+    display: block;
+    top: 14px;
+    left: 26px;
+    content: " ";
+    height: 30px;
+    width: 2px;
+    background-color: rgb(0, 0, 0);
+}
+
+.closeSpanDiv span:before {
+    content: "";
+    transform: rotate(45deg);
+}
+
+.closeSpanDiv span:after {
+    content: "";
+    transform: rotate(-45deg);
+}

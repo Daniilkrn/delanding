@@ -54,10 +54,10 @@ const path = {
     clean: "./" + distPath
 };
 
-async function buildHtml() {
-    gulp.src(["*.html"])
-        .pipe(gulp.dest(path.scripts.dest));
-}
+// async function buildHtml() {
+//     gulp.src(["*.html"])
+//         .pipe(gulp.dest(path.scripts.dest));
+// }
 
 function serve() {
     browserSync.init({
@@ -179,9 +179,9 @@ exports.fonts = fonts;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
-exports.default = async function () {
-    buildHtml();
-};
+// exports.default = async function () {
+//     buildHtml();
+// };
 
 gulp.task("deploy", function() {
     return gulp.src("./dist/**/*")
