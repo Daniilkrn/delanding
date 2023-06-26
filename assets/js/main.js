@@ -181,6 +181,5 @@ function confirmPos(pos, flag) {
     documentEl.scrollTo({
         top: pos,
         left: 0,
-        behavior: "smooth"
     });
 }
