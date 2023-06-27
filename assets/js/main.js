@@ -33,49 +33,25 @@ let inputs = [
     }
 ];
 
+function validation (form) {
 
+    let check = {
+        validation: false,
+    };
 
-document.querySelectorAll(".input").forEach((el, _idx) => el.addEventListener("input", (e) => {
-    // let className = e.target.className.split(" ")[1];
-    // let emailVal = email.value;
-    let p = el.closest("label");
-    if (e.target.value.length <= 0) {
-        // inputs[_idx].validate = true;
-        e.target.classList.add("error");
-        // let newEl = p.appendChild(document.createElement("p"));
-        // newEl.className = "p_error";
-
-    } else {
-        e.target.classList.remove("error");
-        // let p = document.querySelector(".p_error");
-        // if (p) p.parentNode.removeChild(p);
-        // inputs[_idx].error = "";
-        // inputs[_idx].validate = false;
-    }
-
-    // if (validateEmail(e.target.value)) {
-    //     inputs[1].validate = false;
-    //     inputs[1].error = "";
-    // } else {
-    //     inputs[1].validate = true;
-    //     inputs[1].error = "введите корректный e-mail";
-    // }
-}));
-
-function validation(form) {
-
-
-    function removeError(input) {
+    function removeError (input,flag) {
         const parent = input.closest("label");
         const child = parent.querySelector(".errorText");
-        console.log(input.classList);
-        if (input.classList.contains("error")) {
+        
+        if(input.classList.contains("error")){
             child.remove();
             child.classList.remove(".errorText");
+            input.classList.remove("error");
         }
+
     }
 
-    function createError(input, text) {
+    function createError(input,text) {
         const parent = input.parentNode;
         const p = document.createElement("p");
         p.classList.add("errorText");
@@ -84,33 +60,47 @@ function validation(form) {
         parent.append(p);
     }
 
-    let result = true;
-
-    form.querySelectorAll("input").forEach(input => {
+    form.querySelectorAll("input").forEach((input,idx) => {
 
         removeError(input);
+        let email;
 
-        if (input.value == "") {
-            result = false;
-            createError(input, "обязательное поле!");
+        if(input.value == ""){
+            if(idx !== 1) createError(input, "обязательное поле!", true);
+        } else {
+            if(idx !== 1){
+                const parent = input.closest("label");
+                const child = parent.querySelector(".errorText");
+                if(child) {
+                    child.remove();
+                    child.classList.remove(".errorText");
+                    input.classList.remove("error");
+                    check.validation = true;
+                } 
+            } 
         }
-    });
 
-    return result;
+        if(idx === 1){
+            email = validateEmail(input.value);
+            if(!email){
+                createError(input, "введите ваш e-mail!");
+            } else {
+                check.validation = true;
+            }
+        }
+
+    });
+    
+    return check.validation;
 }
 
 
 form.onsubmit = function submitForm(event) {
     event.preventDefault();
-
-    if (validation(this) == true) {
+    
+    if(validation(this) == true){
         scrollController.setMessageModal();
     }
-    // let check = inputs.filter(input => input.validate === true);
-
-    // if (!check.length) {
-    //     scrollController.setMessageModal();
-    // }
 };
 
 const scrollController = {
@@ -175,11 +165,8 @@ modalSent.addEventListener("click", () => {
 
 
 function confirmPos(pos, flag) {
-    let documentEl = {};
-    flag ? documentEl = window : documentEl = body;
-
-    setTimeout(window.scrollTo({
+    window.scrollTo({
         top: pos,
         left: 0,
-    }));
+    });
 }
