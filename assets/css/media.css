@@ -179,6 +179,12 @@
   .logo__container__content .square_logo__container__content .sec7 {
         border-right: 1px solid #FFFFFF;
     }
+
+    .modalConfirm.open .modalConfrim_box .message {
+        text-align: center;
+        font-size: calc(16px + 2.4vw) !important;
+        white-space: normal !important;
+    }
 }
 
 @media (max-width: 548px) {
@@ -259,8 +265,8 @@
     }
 
     .modal .modal_box .form input {
-        max-width: 400px !important;
-        min-width: 200px !important;
+        max-width: 400px;
+        min-width: 200px;
     }
 
     .modal .modal_box .closeSpanDiv {
@@ -294,7 +300,7 @@
         width: 100%;
     }
 }
-/*clients*/
+
 @media (max-width: 1023px) {
     .clientHelp {
         width: 100%;
@@ -582,9 +588,18 @@
         max-height: none !important;
         width: 80% !important;
     }
+
+    .modal_box {
+        padding: 56px !important;
+    }
+
+    .modal_box input {
+        max-width: 170px !important;
+        min-width: 150px !important;
+    }
 }
 
-@media (orientation: landscape) {
+@media screen and (max-height: 420px) {
     .modal .modal_box {
         overflow: auto !important;
         padding: 40px !important;
@@ -593,5 +608,15 @@
 
     .modal .modal_box .form {
         overflow: auto;
+    }
+
+    .modalConfirm.open .modalConfrim_box {
+        overflow: auto !important;
+        margin: 20px !important;
+        min-height: initial !important;
+    }
+
+    .modalConfirm.open .modalConfrim_box .message {
+        margin: 40px;
     }
 }

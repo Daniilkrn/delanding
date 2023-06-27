@@ -389,7 +389,6 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: auto;
     padding: 56px;
 }
 
@@ -484,12 +483,31 @@ section {
     transition: transform 0.8s ease-in-out;
 }
 
+.modalConfirm .modalConfrim_box .confirm_container {
+    margin: 40px 0px;
+    display: flex;
+    justify-content: center;
+}
+
 .modalConfirm .modalConfrim_box .message {
     font-family: "Gilroy-Regular";
-    font-size: 34px;
+    font-size: 26px;
+    margin-top: 20px;
     line-height: 74px;
+    line-height: 44px;
     letter-spacing: 0.04em;
     color: #111418;
+}
+
+.modalConfirm .modalConfrim_box .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    animation: shadow linear 0.45s forwards;
+    box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
 }
 
 .modalConfirm.open .modalConfrim_box {
@@ -497,12 +515,74 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    min-height: 320px;
+    overflow: initial;
 }
 
 .modalConfirm.open .modalConfrim_box .message {
+    overflow: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
     font-family: "Gilroy-Regular";
     font-size: 26px;
+    margin-top: 20px;
+    line-height: 44px;
+    letter-spacing: 0.04em;
+    color: #111418;
+    white-space: nowrap;
+}
+
+.modalConfirm.open .modalConfrim_box .message .confirm_container {
+    margin: 40px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.modalConfirm.open .modalConfrim_box .message .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    animation: shadow linear 0.45s forwards;
+    box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0px 0px 0px 4px rgba(5, 174, 113, 0.15);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
+    }
+}
+
+@keyframes shadowError {
+    0% {
+        box-shadow: 0px 0px 0px 4px rgba(232, 78, 88, 0.15);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 24px rgba(232, 78, 88, 0.15);
+    }
+}
+
+.modalConfirm.open .modalConfrim_box .message .title {
+    font-family: "SB Sans Interface";
+    color: #333333;
+    font-weight: 900;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modalConfirm.open .modalConfrim_box .message .title.confirm {
+    justify-content: center;
 }
 
 .modalConfirm.open {
