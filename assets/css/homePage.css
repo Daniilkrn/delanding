@@ -261,7 +261,6 @@ section {
 .modal .modal_box {
     padding: 56px;
     transform: scale(0.4);
-    background-color: red;
     max-width: 500px;
     z-index: 1;
     background-color: white;
