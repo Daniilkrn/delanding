@@ -182,6 +182,6 @@ exports.default = watch;
 
 
 gulp.task("deploy", function() {
-    return gulp.src("./dist/**/*")
+    return gulp.src(distPath)
         .pipe(ghPages());
 });

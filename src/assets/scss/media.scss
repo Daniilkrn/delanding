@@ -191,6 +191,13 @@
         }
     }
 
+    .modalConfirm.open .modalConfrim_box {
+        .message {
+            text-align: center;
+            font-size: calc(16px + 12 * (100vw / 500)) !important;
+            white-space: normal !important;
+        }
+    }
 }
 
 @media (max-width: 548px) {
@@ -226,15 +233,12 @@
         }
     }
 
-
     .main_desc {
         width: 100% !important;
         background-size: 40%;
         background-position-x: 490px;
         background-position-y: 420px;
-        // padding: 110px 320px 190px;
         background-size: 30%;
-        // max-width: 400px !important;
     }
 
     .talk {
@@ -271,8 +275,8 @@
                 padding: 50px;
                 overflow: auto;
                 input {
-                    max-width: 400px !important;
-                    min-width: 200px !important;
+                    max-width: 400px;
+                    min-width: 200px;
                 }
             }
             .closeSpanDiv{
@@ -314,7 +318,6 @@
     }
 }
 
-/*clients*/
 @media (max-width: 1023px) {
     .clientHelp {
         width: 100%;
@@ -394,7 +397,6 @@
         }
 
         .talk {
-
             flex-direction: column;
         }
     }
@@ -404,8 +406,6 @@
     }
 
     .logo_clients {
-        .logo__container {}
-
         display: flex;
         justify-content: center !important;
 
@@ -432,8 +432,6 @@
         .square_logo__container {
             width: 70%;
 
-            .logoSection {}
-
             .sec2,
             .sec6 {
                 border-right: none !important;
@@ -445,8 +443,6 @@
             }
         }
     }
-
-    .background {}
 }
 
 @media (max-width: 800px) {
@@ -460,7 +456,6 @@
             align-items: center;
             margin-bottom: 100px;
             text-align: center;
-
             br {
                 display: none;
             }
@@ -471,26 +466,19 @@
             }
 
             .card {
-
                 margin-right: 0 !important;
-
                 margin-top: 0px !important;
-
                 br {
                     display: none;
                 }
             }
         }
 
-        .right_sec {}
-
         .card {
             width: 70%;
-
             br {
                 display: none;
             }
-
             .desc1 {
                 p {
                     white-space: normal;
@@ -515,7 +503,6 @@
                 text-align: center;
                 justify-content: center;
             }
-
             max-width: none !important;
             width: 90% !important;
             margin-right: 0 !important;
@@ -533,15 +520,11 @@
             .left_block {
                 margin-right: 0px !important;
             }
-
         }
     }
 
     .logo__container__content {
-
         max-width: 90%;
-
-        .desc {}
 
         .square_logo__container__content {
             justify-content: center !important;
@@ -581,10 +564,6 @@
 
     .talk {
         left: 0 !important;
-    }
-
-    .talk__container__content{
- 
     }
 }
 
@@ -634,13 +613,10 @@
 }
 
 @media screen and (max-width: 400px) {
-    .conent_maindesc__container {}
-
     .clientHelp {
 
         .clientHelp__container__content {
             max-width: none !important;
-
             .card {
                 min-width: 80% !important;
                 max-height: none !important;
@@ -649,9 +625,16 @@
             }
         }
     }
+    .modal_box{
+        padding: 56px !important;
+        input {
+            max-width: 170px !important;
+            min-width: 150px !important;
+        }
+    }
 }
 
-@media (orientation: landscape) {
+@media screen and (max-height: 420px){
     .modal{
         .modal_box {
             overflow: auto !important;
@@ -662,4 +645,17 @@
             }
         }
     }
+
+    .modalConfirm.open{
+        .modalConfrim_box {
+            overflow: auto !important;
+            margin: 20px !important;
+            min-height: initial !important;
+            
+            .message {
+                margin: 40px ;
+            }
+        }
+    }
 }
+
