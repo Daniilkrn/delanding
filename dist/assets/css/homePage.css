@@ -261,7 +261,6 @@ section {
 .modal .modal_box {
     padding: 56px;
     transform: scale(0.4);
-    background-color: red;
     max-width: 500px;
     z-index: 1;
     background-color: white;
@@ -506,8 +505,6 @@ section {
     width: 40px;
     height: 40px;
     border-radius: 100px;
-    animation: shadow linear 0.45s forwards;
-    box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
 }
 
 .modalConfirm.open .modalConfrim_box {
@@ -518,6 +515,7 @@ section {
     justify-content: space-between;
     min-height: 320px;
     overflow: initial;
+    transition: 1s all;
 }
 
 .modalConfirm.open .modalConfrim_box .message {
@@ -548,27 +546,16 @@ section {
     width: 40px;
     height: 40px;
     border-radius: 100px;
-    animation: shadow linear 0.45s forwards;
-    box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
+    animation: shadow linear 1s forwards;
 }
 
 @keyframes shadow {
     0% {
-        box-shadow: 0px 0px 0px 4px rgba(5, 174, 113, 0.15);
+        box-shadow: 0px 0px 0px 4px rgba(174, 44, 5, 0.15);
     }
 
     100% {
         box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
-    }
-}
-
-@keyframes shadowError {
-    0% {
-        box-shadow: 0px 0px 0px 4px rgba(232, 78, 88, 0.15);
-    }
-
-    100% {
-        box-shadow: 0px 0px 0px 24px rgba(232, 78, 88, 0.15);
     }
 }
 

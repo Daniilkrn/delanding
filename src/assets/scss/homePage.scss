@@ -37,11 +37,7 @@ section {
     background-position-x: 760px;
     background-position-y: 20px;
 
-    // background-size: 50%;
-
     .conent_maindesc__container__content {
-
-        // margin-right: 36px;
         z-index: 110px;
         display: flex;
         flex-direction: row;
@@ -268,7 +264,6 @@ section {
     .modal_box {
         padding: 56px;
         transform: scale(0.4);
-        background-color: red;
         max-width: 500px;
         z-index: 1;
         background-color: white;
@@ -488,11 +483,13 @@ section {
         border-radius: 10px;
         transform: scale(0);
         transition: transform .8s ease-in-out;
-        .confirm_container{
+
+        .confirm_container {
             margin: 40px 0px;
             display: flex;
             justify-content: center;
         }
+
         .message {
             font-family: 'Gilroy-Regular';
             font-size: 26px;
@@ -502,6 +499,7 @@ section {
             letter-spacing: 0.04em;
             color: #111418;
         }
+
         .icon {
             display: flex;
             justify-content: center;
@@ -509,13 +507,8 @@ section {
             width: 40px;
             height: 40px;
             border-radius: 100px;
-            animation: shadow linear 0.45s forwards;
-            -webkit-box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
-            -moz-box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
-            box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
         }
     }
-
 }
 
 
@@ -527,6 +520,7 @@ section {
     justify-content: space-between;
     min-height: 320px;
     overflow: initial;
+    transition: 1s all;
 
     .message {
         overflow: initial;
@@ -541,11 +535,13 @@ section {
         letter-spacing: 0.04em;
         color: #111418;
         white-space: nowrap;
-        .confirm_container{
+
+        .confirm_container {
             margin: 40px 0px;
             display: flex;
             justify-content: center;
         }
+
         .icon {
             display: flex;
             justify-content: center;
@@ -553,37 +549,20 @@ section {
             width: 40px;
             height: 40px;
             border-radius: 100px;
-            animation: shadow linear 0.45s forwards;
-            -webkit-box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
-            -moz-box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
-            box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
+            animation: shadow linear 1s forwards;
         }
 
         @keyframes shadow {
             0% {
                 -webkit-box-shadow: 0px 0px 0px 4px rgba(5, 174, 113, 0.15);
                 -moz-box-shadow: 0px 0px 0px 4px rgba(5, 174, 113, 0.15);
-                box-shadow: 0px 0px 0px 4px rgba(5, 174, 113, 0.15);
+                box-shadow: 0px 0px 0px 4px rgba(174, 44, 5, 0.15);
             }
 
             100% {
                 -webkit-box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
                 -moz-box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
                 box-shadow: 0px 0px 0px 24px rgba(5, 174, 113, 0.15);
-            }
-        }
-
-        @keyframes shadowError {
-            0% {
-                -webkit-box-shadow: 0px 0px 0px 4px rgba(232, 78, 88, 0.15);
-                -moz-box-shadow: 0px 0px 0px 4px rgba(232, 78, 88, 0.15);
-                box-shadow: 0px 0px 0px 4px rgba(232, 78, 88, 0.15);
-            }
-
-            100% {
-                -webkit-box-shadow: 0px 0px 0px 24px rgba(232, 78, 88, 0.15);
-                -moz-box-shadow: 0px 0px 0px 24px rgba(232, 78, 88, 0.15);
-                box-shadow: 0px 0px 0px 24px rgba(232, 78, 88, 0.15);
             }
         }
 

@@ -76,13 +76,6 @@ p {
     padding: 0;
 }
 
-// [class*="__container__header"] {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 1200px;
-// }
-
 [class*="__container__content"] {
     display: flex;
     justify-content: center;
@@ -297,7 +290,6 @@ footer {
 
                 li:not(:last-child) {
                     margin-bottom: 16px;
-
                 }
             }
         }
@@ -385,11 +377,9 @@ footer {
     }
 }
 
-
 .background_clients {
     display: flex;
     flex-direction: column;
-    // position: relative;
     width: 100%;
     border-radius: 200px 0px 0px 0px;
     background: #5A98D0;
@@ -446,7 +436,6 @@ footer {
             .logoSection {
                 min-width: 235px;
                 max-width: 235px;
-                // max-width: 235px;
                 text-align: center;
                 padding: 41px 0px;
                 margin: 0;
@@ -494,5 +483,4 @@ footer {
 
         }
     }
-
 }

@@ -1,4 +1,4 @@
-@media (max-width: 1380px) {
+@media screen and (max-width: 1380px) {
     .main_desc {
         background-size: 40%;
         background-position-x: 760px;
@@ -12,19 +12,17 @@
     }
 }
 
-@media (max-width: 1250px) {
+@media screen and (max-width: 1250px) {
     .main_desc {
         background-size: 35%;
         background-position-x: 760px;
         background-position-y: 90px;
-
     }
 }
 
-@media (max-width: 1086px) {
+@media screen and (max-width: 1086px) {
     header {
         padding: 48px 20px;
-
     }
 
     .main_desc {
@@ -32,8 +30,7 @@
     }
 }
 
-
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     .conent_maindesc__container__content {
         max-width: 700px;
     }
@@ -44,13 +41,10 @@
         background-size: 40%;
         background-position-x: 560px;
         background-position-y: 290px;
-
     }
 
     .logo__container__content {
         max-width: 760px;
-
-        .desc {}
 
         .square_logo__container__content {
             justify-content: center !important;
@@ -102,7 +96,6 @@
     .footer__container__content {
         align-items: center !important;
         flex-direction: column-reverse !important;
-
         max-width: 80%;
 
         .leftMain_block {
@@ -110,6 +103,7 @@
             min-width: 100% !important;
             width: 100% !important;
             margin-top: 40px;
+
             br {
                 display: none;
             }
@@ -120,6 +114,7 @@
             margin-left: 0 !important;
             margin-right: 0 !important;
             justify-content: center !important;
+
             .left_block {
                 margin-right: 180px !important;
             }
@@ -128,20 +123,17 @@
 }
 
 
-@media (max-width: 862px) {
+@media screen and (max-width: 862px) {
     .main_desc {
-
         background-size: 32%;
         background-position-x: 590px;
         background-position-y: 390px;
-
     }
 }
 
-@media (max-width: 527px) {
+@media screen and (max-width: 527px) {
     .logo__container__content {
         .desc {
-
             flex-direction: column !important;
 
             br {
@@ -200,11 +192,12 @@
     }
 }
 
-@media (max-width: 548px) {
+@media screen and (max-width: 548px) {
     .main_desc {
         padding: 0;
         background-image: none;
         padding-bottom: 190px;
+
         h1 {
             width: 100%;
             padding: 0 !important;
@@ -216,19 +209,19 @@
 }
 
 
-@media (max-width: 721px) {
+@media screen and (max-width: 721px) {
 
     .conent_maindesc__container__content {
         max-width: none !important;
         padding: 0px 20px;
+
         .desc {
             max-width: 40% !important;
-            min-width: 80%  !important;
+            min-width: 80% !important;
             white-space: normal !important;
 
             h1 {
                 white-space: normal !important
-                
             }
         }
     }
@@ -264,24 +257,27 @@
             margin-right: 0 !important;
         }
     }
-    .modal{
+
+    .modal {
         .modal_box {
             padding: 24px !important;
             overflow: auto;
             margin: 20px 0px !important;
             padding: 0 !important;
             max-width: 80%;
-            .form{
+
+            .form {
                 padding: 50px;
                 overflow: auto;
+
                 input {
                     max-width: 400px;
                     min-width: 200px;
                 }
             }
-            .closeSpanDiv{
+
+            .closeSpanDiv {
                 position: fixed !important;
-               
             }
         }
     }
@@ -293,7 +289,7 @@
     }
 }
 
-@media (max-width: 1240px) {
+@media screen and (max-width: 1240px) {
     .background_clients {
         .background {
             .talk__container {
@@ -318,7 +314,7 @@
     }
 }
 
-@media (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
     .clientHelp {
         width: 100%;
         display: flex;
@@ -341,7 +337,7 @@
     }
 }
 
-@media (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
     .background_clients {
         width: 100%;
 
@@ -369,8 +365,7 @@
     }
 }
 
-
-@media (max-width: 935px) {
+@media screen and (max-width: 935px) {
     .clientHelp {
 
         .left_sec {
@@ -445,7 +440,7 @@
     }
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .clientHelp {
         .clientHelp__container__content {
             flex-direction: column;
@@ -456,6 +451,12 @@
             align-items: center;
             margin-bottom: 100px;
             text-align: center;
+
+            
+            h1 {
+                margin: 10px !important;
+            }
+
             br {
                 display: none;
             }
@@ -468,21 +469,33 @@
             .card {
                 margin-right: 0 !important;
                 margin-top: 0px !important;
+
                 br {
                     display: none;
                 }
             }
+
+            
         }
 
         .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
             width: 70%;
+
             br {
                 display: none;
             }
+
             .desc1 {
                 p {
                     white-space: normal;
                 }
+            }
+
+            .learn_more{
+                margin-bottom: 14px !important;
             }
         }
     }
@@ -503,6 +516,7 @@
                 text-align: center;
                 justify-content: center;
             }
+
             max-width: none !important;
             width: 90% !important;
             margin-right: 0 !important;
@@ -558,7 +572,7 @@
         }
     }
 
-    .content{
+    .content {
         max-width: 100% !important;
     }
 
@@ -567,7 +581,7 @@
     }
 }
 
-@media (max-width: 630px) {
+@media screen and (max-width: 630px) {
     .conent_maindesc__container {
         .desc {
             width: 100% !important;
@@ -606,7 +620,7 @@
     }
 
     .leftMain_block {
-        br{
+        br {
             display: block !important;
         }
     }
@@ -617,16 +631,18 @@
 
         .clientHelp__container__content {
             max-width: none !important;
+
             .card {
                 min-width: 80% !important;
                 max-height: none !important;
-             
                 width: 80% !important;
             }
         }
     }
-    .modal_box{
+
+    .modal_box {
         padding: 56px !important;
+
         input {
             max-width: 170px !important;
             min-width: 150px !important;
@@ -634,28 +650,27 @@
     }
 }
 
-@media screen and (max-height: 420px){
-    .modal{
+@media screen and (max-height: 420px) {
+    .modal {
         .modal_box {
             overflow: auto !important;
-            padding: 40px !important;
             margin: 20px !important;
-            .form{
+
+            .form {
                 overflow: auto;
             }
         }
     }
 
-    .modalConfirm.open{
+    .modalConfirm.open {
         .modalConfrim_box {
             overflow: auto !important;
             margin: 20px !important;
             min-height: initial !important;
-            
+
             .message {
-                margin: 40px ;
+                margin: 40px;
             }
         }
     }
 }
-
