@@ -33,25 +33,27 @@ let inputs = [
     }
 ];
 
-function validation (form) {
+function validation(form) {
+
+    let count = [];
 
     let check = {
-        validation: false,
+        validationAll: false,
+        validationEmail: false,
     };
 
-    function removeError (input,flag) {
+    function removeError(input, flag) {
         const parent = input.closest("label");
         const child = parent.querySelector(".errorText");
-        
-        if(input.classList.contains("error")){
+
+        if (input.classList.contains("error")) {
             child.remove();
             child.classList.remove(".errorText");
             input.classList.remove("error");
         }
-
     }
 
-    function createError(input,text) {
+    function createError(input, text) {
         const parent = input.parentNode;
         const p = document.createElement("p");
         p.classList.add("errorText");
@@ -60,48 +62,79 @@ function validation (form) {
         parent.append(p);
     }
 
-    form.querySelectorAll("input").forEach((input,idx) => {
+    form.querySelectorAll("input").forEach((input, idx) => {
 
         removeError(input);
         let email;
-
-        if(input.value == ""){
-            if(idx !== 1) createError(input, "обязательное поле!", true);
-        } else {
-            if(idx !== 1){
-                const parent = input.closest("label");
-                const child = parent.querySelector(".errorText");
-                if(child) {
-                    child.remove();
-                    child.classList.remove(".errorText");
-                    input.classList.remove("error");
-                    check.validation = true;
-                } 
-            } 
-        }
-
-        if(idx === 1){
+    
+        if (idx === 1) {
             email = validateEmail(input.value);
-            if(!email){
+            if (!email) {
                 createError(input, "введите ваш e-mail!");
             } else {
-                check.validation = true;
+                check.validationEmail = true;
             }
         }
 
-    });
-    
-    return check.validation;
-}
+        if (input.value.trim() == "") {
+            if (idx !== 1) createError(input, "обязательное поле!", true);
+        } else {
+            count.push(idx);
+            if(email && count.length > 1) check.validationAll = true;
+        }
 
+    });
+
+    if(check.validationAll && check.validationEmail) return true;
+
+}
 
 form.onsubmit = function submitForm(event) {
     event.preventDefault();
-    
-    if(validation(this) == true){
-        scrollController.setMessageModal();
+
+    if (validation(this) == true) {
+        submitHandler(this);
     }
 };
+
+/*шаблон для отправки данных на бэк*/
+
+async function submitHandler(formCurrent) {
+
+    formCurrent.classList.add("sending");
+    let div = document.createElement("div");
+    div.className = "sendingDiv";
+    div.innerHTML = `
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    `;
+    formCurrent.append(div);
+
+    await fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        body: JSON.stringify({
+            title: "testTitle",
+            body: "testBody",
+            userId: 1,
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8",
+        },
+    })
+        .then(response => response.json())
+        .then((data) => {
+            if (data) {
+                scrollController.setMessageModal();
+            } else {
+                formCurrent.classList.remove("sending");
+                formCurrent.removeChild(div);
+            }
+        })
+        .finally(()=>{
+            formCurrent.classList.remove("sending");
+            formCurrent.removeChild(div);
+            formCurrent.reset();
+        });
+}
 
 const scrollController = {
 
@@ -130,7 +163,6 @@ const scrollController = {
 
     disableMessageModal() {
         modalSent.classList.remove("open");
-        form.reset();
         confirmPos(this.position, this.flag);
     }
 };
