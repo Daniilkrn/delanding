@@ -104,42 +104,41 @@ header {
 
 header .btn_span {
     display: flex;
-    height: 2px;
+    height: 2.5px;
     justify-content: center;
     left: -30px;
     position: relative;
     top: 16px;
-    width: 30px;
-    width: 24px;
+    width: 28px;
 }
 
 header .btn_span span {
     background: #356EAD;
     bottom: 10px;
     content: "";
-    height: 2px;
+    height: 2.5px;
     left: 0px;
-    width: 24px;
+    width: 28px;
 }
 
 header .btn_span ::before {
     background: #356EAD;
     bottom: 6px;
     content: "";
-    height: 2px;
+    height: 2.5px;
     left: 0;
     position: absolute;
-    width: 24px;
+    width: 28px;
 }
 
 header .btn_span ::after {
     background: #356EAD;
     content: "";
-    height: 2px;
+    height: 2.5px;
     left: 0;
     position: absolute;
     top: 6px;
-    width: 24px;
+    width: 28px;
 }
 
 footer {
