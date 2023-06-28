@@ -79,12 +79,12 @@ function validation(form) {
         if (input.value.trim() == "") {
             if (idx !== 1) createError(input, "обязательное поле!", true);
         } else {
-            count.push(idx);
-            if(email && count.length > 1) check.validationAll = true;
+            if(idx !== 1) count.push(idx);
+            if(count.length > 1 && check.validationEmail) check.validationAll = true;
         }
 
     });
-
+     
     if(check.validationAll && check.validationEmail) return true;
 
 }
