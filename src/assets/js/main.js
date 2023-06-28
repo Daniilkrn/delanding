@@ -124,6 +124,9 @@ async function submitHandler(formCurrent) {
         .then((data) => {
             if (data) {
                 scrollController.setMessageModal();
+            } else {
+                formCurrent.classList.remove("sending");
+                formCurrent.removeChild(div);
             }
         })
         .finally(()=>{
